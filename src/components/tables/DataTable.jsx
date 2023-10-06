@@ -1,7 +1,7 @@
 import React from "react";
 
 function DataTable({ data }) {
-  const headNames = ["KSA ID", "Ksatriya Name", "Image", "Role", "Difficulty"];
+  const headNames = ["KSA ID", "Ksatriya Name", "Role", "Difficulty"];
   return (
     <div className="datatable">
       <table className="table">
@@ -18,7 +18,6 @@ function DataTable({ data }) {
               <tr key={i}>
                 <th scope="row">{item.id}</th>
                 <td>{item.attributes.name}</td>
-                <td>{item.attributes.image.data.attributes.url}</td>
                 <td>{item.attributes.role}</td>
                 <td>{item.attributes.difficulty}</td>
               </tr>

@@ -39,9 +39,9 @@ code {
 }
 
 .datatable {
-  width: 70vw;
-  margin-top: 100px;
+  width: 50vw;
   padding: 5px;
+  margin-top: 10px;
   border: solid black 2px;
 }
 
@@ -49,7 +49,6 @@ code {
   width: 100%;
 }
 
-.row {
-  width: 100%;
-  border: solid red 2px;
+.border {
+  border: solid black 2px;
 }
