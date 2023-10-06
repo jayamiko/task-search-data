@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import InputSearch from "./components/inputs/InputSearch";
+import DataTable from "./components/tables/DataTable";
+import { getKsatriyas } from "./api/dataGetRequests";
 
 function App() {
+  const [dataKsatriya, setDataKsatriya] = React.useState([]);
+  const [value, setValue] = React.useState("");
+
+  React.useEffect(() => {
+    getKsatriyas(setDataKsatriya);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <InputSearch value={value} setValue={setValue} />
+
+      {/* DATA TABLE */}
+      <DataTable data={dataKsatriya} />
     </div>
   );
 }
