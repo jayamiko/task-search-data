@@ -36,6 +36,12 @@ code {
   color: white;
   font-weight: bold;
   border-radius: 6px;
+  cursor: pointer;
+}
+
+.button-search:hover {
+  transition: 0s linear;
+  background-color: rgb(114, 0, 0);
 }
 
 .datatable {

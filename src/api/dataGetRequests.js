@@ -3,12 +3,12 @@ import axios from "axios";
 export function getKsatriyas(setData) {
   const config = {
     headers: {
-      Authorization: "Bearer ",
+      Authorization: "Bearer",
     },
   };
   axios
     .get(
-      `${process.env.REACT_APP_API_URL}/api/ksatriyas?pagination[pageSize]=20&populate=*`,
+      `${process.env.REACT_APP_API_URL}/api/ksatriyas?pagination[pageCount]=1&populate=*`,
       config
     )
     .then((res) => {
